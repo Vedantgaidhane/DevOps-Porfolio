@@ -6,6 +6,7 @@ import {
   AiFillInstagram,
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
+import { SiX } from "react-icons/si";
 
 function Footer() {
   let date = new Date();
@@ -33,12 +34,12 @@ function Footer() {
             </li>
             <li className="social-icons">
               <a
-                href=""
+                href="https://x.com/VedantGaidhane?t=1pTPD2TV7g7Dsjb5xJq_rg&s=09"
                 style={{ color: "white" }}
                 target="_blank" 
                 rel="noopener noreferrer"
               >
-                <AiOutlineTwitter />
+               <SiX />
               </a>
             </li>
             <li className="social-icons">
@@ -53,7 +54,7 @@ function Footer() {
             </li>
             <li className="social-icons">
               <a
-                href=""
+                href="https://www.instagram.com/vedant_gaidhane?igsh=MXI5cWwxcW9qenlsMg=="
                 style={{ color: "white" }}
                 target="_blank" 
                 rel="noopener noreferrer"

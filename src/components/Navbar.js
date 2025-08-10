@@ -15,6 +15,7 @@ import {
 } from "react-icons/ai";
 
 import { CgFileDocument } from "react-icons/cg";
+import { FaInstagram } from "react-icons/fa";
 
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
@@ -39,19 +40,19 @@ function NavBar() {
     >
       <Container>
         <Navbar.Brand href="/" className="d-flex">
-  {/* <img src={logo} className="img-fluid logo" alt="brand" /> */}
-  <span
-    style={{
-      fontWeight: "bold",
-      fontSize: "2rem",
-      color: "#6c63ff",
-      letterSpacing: "2px",
-      fontFamily: "'Poppins', 'Segoe UI', Arial, sans-serif",
-    }}
-  >
-    VG.
-  </span>
-</Navbar.Brand>
+          {/* <img src={logo} className="img-fluid logo" alt="brand" /> */}
+          <span
+            style={{
+              fontWeight: "bold",
+              fontSize: "2rem",
+              color: "#6c63ff",
+              letterSpacing: "2px",
+              fontFamily: "'Poppins', 'Segoe UI', Arial, sans-serif",
+            }}
+          >
+            VG.
+          </span>
+        </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
           onClick={() => {
@@ -105,14 +106,23 @@ function NavBar() {
 
             <Nav.Item>
               <Nav.Link
-                href="https://soumyajitblogs.vercel.app/"
+                as={Link}
+                to="/instagram"
+                onClick={() => updateExpanded(false)}
+              >
+                <CgFileDocument style={{ marginBottom: "2px" }} /> Photography
+              </Nav.Link>
+            </Nav.Item>
+
+            <Nav.Item>
+              <Nav.Link
+                href="https://medium.com/@vedantkgaidhane"
                 target="_blank"
                 rel="noreferrer"
               >
                 <ImBlog style={{ marginBottom: "2px" }} /> Blogs
               </Nav.Link>
             </Nav.Item>
-
             <Nav.Item className="fork-btn">
               <Button
                 href="https://github.com/Vedantgaidhane/DevOps-Porfolio"

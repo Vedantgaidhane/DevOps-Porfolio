@@ -2,12 +2,6 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
-import leaf from "../../Assets/Projects/leaf.png";
-import emotion from "../../Assets/Projects/emotion.png";
-import editor from "../../Assets/Projects/codeEditor.png";
-import chatify from "../../Assets/Projects/chatify.png";
-import suicide from "../../Assets/Projects/suicide.png";
-import bitsOfCode from "../../Assets/Projects/blog.png";
 
 function Projects() {
   return (
@@ -15,81 +9,105 @@ function Projects() {
       <Particle />
       <Container>
         <h1 className="project-heading">
-          My Recent <strong className="purple">Works </strong>
+          My <strong className="purple">Projects </strong>
         </h1>
         <p style={{ color: "white" }}>
-          Here are a few projects I've worked on recently.
+          Here are some of the key DevOps and AWS projects I've worked on.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+          {/* AWS Resource Tracker */}
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={chatify}
               isBlog={false}
-              title="Cloud & AWS Impact"
-              description="•Slashed AWS costs by 30–40% through proactive optimization: cleaning idle resources, converting EBS gp2→gp3, and leveraging Savings Plans & Reserved Instances.
-• Architected and managed AWS Organizations with centralized billing & governance using AWS SSO.
-• Tuned RDS for performance & cost (migrated io2 → gp3), saving $600+/month for key clients.
-• Automated EC2 start/stop in non-prod using Lambda + EventBridge, cutting idle compute costs.
-• Delivered ultra-fast, zero-cost hosting via S3 + CloudFront.
-• Hardened security & availability with WAF + ALB, SES integration, and IAM-secured SMTP creds."
-              // ghLink="https://github.com/soumyajit4419/Chatify"
-              // demoLink="https://chatify-49.web.app/"
+              title="AWS Resource Tracker"
+              description="A robust shell script leveraging AWS CLI and jq to fetch and display EC2, S3, IAM, and RDS details in a readable format. Enables automated monitoring for real-time AWS insights, helping teams maintain visibility and control over their cloud resources."
+              ghLink="https://github.com/Vedantgaidhane/AWS-Resource-Explorer"
             />
           </Col>
 
+          {/* AWS Node Health Tracker */}
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={bitsOfCode}
               isBlog={false}
-              title="Bits-0f-C0de"
-              description="My personal blog page build with Next.js and Tailwind Css which takes the content from makdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
-              // ghLink="https://github.com/soumyajit4419/Bits-0f-C0de"
-              demoLink="https://blogs.soumya-jit.tech/"
+              title="AWS Node Health Tracker"
+              description="A Bash script to monitor AWS node health including CPU, memory, and disk space. Utilizes standard Unix tools for analysis and Git for version control. This tool ensures proactive detection of resource bottlenecks and supports operational reliability."
+              ghLink="https://github.com/Vedantgaidhane/AWS-Node-Health-Tracker"
             />
           </Col>
 
+          {/* Cost Optimization Lambda */}
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={editor}
               isBlog={false}
-              title="Editor.io"
-              description="Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview.Both the editor supports auto save of work using Local Storage"
-              // ghLink="https://github.com/soumyajit4419/Editor.io"
-              demoLink="https://editor.soumya-jit.tech/"              
+              title="AWS Cost Optimization using Lambda"
+              description="Implemented AWS Lambda functions to automatically remove unattached EC2 snapshots, reducing unnecessary storage costs. Optimized memory, timeouts, and triggers for efficient execution, resulting in significant AWS cost savings and improved serverless performance."
             />
           </Col>
 
+          {/* Dockerized Spring Boot */}
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={leaf}
               isBlog={false}
-              title="Plant AI"
-              description="Used the plant disease dataset from Kaggle and trained a image classifer model using 'PyTorch' framework using CNN and Transfer Learning with 38 classes of various plant leaves. The model was successfully able to detect diseased and healthy leaves of 14 unique plants. I was able to achieve an accuracy of 98% by using Resnet34 pretrained model."
-              // ghLink="https://github.com/soumyajit4419/Plant_AI"
-              demoLink="https://plant49-ai.herokuapp.com/"
+              title="Dockerized Spring Boot Java Web Service"
+              description="Containerized a Spring Boot Java web service using Maven and Docker. Created a production-ready Dockerfile, built the image, and deployed the container on port 8080 (exposed via port 80). This approach streamlines deployment and enhances scalability."
+              ghLink="https://www.linkedin.com/posts/er-vedant-gaidhane-4a4051208_docker-springboot-java-activity-7187676432783884288-_pEG"
             />
           </Col>
 
+          {/* Wanderlust Deployment */}
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={suicide}
               isBlog={false}
-              title="Ai For Social Good"
-              description="Using 'Natural Launguage Processing' for the detection of suicide-related posts and user's suicide ideation in cyberspace  and thus helping in sucide prevention."
-              // ghLink="https://github.com/soumyajit4419/AI_For_Social_Good"
-              // demoLink="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" <--------Please include a demo link here
+              title="Wanderlust Three-Tier Deployment"
+              description="Deployed a full-stack application (React, TypeScript, Node.js, MongoDB) with Docker on AWS EC2. Configured backend infrastructure using NVM and MongoDB for seamless performance. Followed AWS DevOps best practices for scalability and reliability."
+              ghLink="https://github.com/Vedantgaidhane/wanderlust"
             />
           </Col>
 
+          {/* EKS 2048 Game */}
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={emotion}
               isBlog={false}
-              title="Face Recognition and Emotion Detection"
-              description="Trained a CNN classifier using 'FER-2013 dataset' with Keras and tensorflow backened. The classifier sucessfully predicted the various types of emotions of human. And the highest accuracy obtained with the model was 60.1%.
-              Then used Open-CV to detect the face in an image and then pass the face to the classifer to predict the emotion of a person."
-              // ghLink="https://github.com/soumyajit4419/Face_And_Emotion_Detection"
-              // demoLink="https://blogs.soumya-jit.tech/"      <--------Please include a demo link here 
+              title="2048 Game on EKS with ALB & Ingress"
+              description="Created a secure VPC with public/private subnets on EKS, configured Application Load Balancer for routing, and used Ingress Controller for efficient traffic management to application pods. Demonstrates advanced Kubernetes networking and AWS integration."
+              ghLink="https://github.com/Vedantgaidhane/Deploying-2048-Game-with-EKS-ALB-and-Ingress-Controller-in-a-VPC"
+            />
+          </Col>
+
+          {/* CountryBank CI/CD */}
+          <Col md={4} className="project-card">
+            <ProjectCard
+              isBlog={false}
+              title="CountryBank CI/CD Pipeline"
+              description="Implemented a robust Jenkins pipeline integrating Docker, SonarQube, Trivy, and Gradle for automated build, test, and deployment on AWS EC2. This pipeline ensures code quality, security, and rapid delivery for banking applications."
+              ghLink="https://github.com/Vedantgaidhane/CountryBank"
+            />
+          </Col>
+
+          {/* Secret Santa CI/CD */}
+          <Col md={4} className="project-card">
+            <ProjectCard
+              isBlog={false}
+              title="Secret Santa CI/CD Pipeline"
+              description="Developed a Jenkins-based CI/CD pipeline for the Secret Santa app, featuring Docker containerization, SonarQube integration, and AWS deployment. Automated testing and deployment streamline the release process and improve reliability."
+            />
+          </Col>
+
+          {/* PetClinic GitLab CI/CD */}
+          <Col md={4} className="project-card">
+            <ProjectCard
+              isBlog={false}
+              title="PetClinic GitLab CI/CD"
+              description="Built a CI/CD pipeline in GitLab using Docker, Maven, SonarQube, and AWS EC2 runners for automated deployment. This setup ensures continuous integration, code quality checks, and seamless deployments for Java applications."
+            />
+          </Col>
+
+          {/* E-Commerce CI/CD */}
+          <Col md={4} className="project-card">
+            <ProjectCard
+              isBlog={false}
+              title="E-Commerce CI/CD Automation"
+              description="Automated a Jenkins CI/CD pipeline integrating GitHub, Maven, SonarQube, Nexus, Docker, and Trivy for secure and fast deployments. Enhanced the software delivery process with security scanning and artifact management."
             />
           </Col>
         </Row>

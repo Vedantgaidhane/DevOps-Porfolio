@@ -4,10 +4,10 @@ import myImg from "../../Assets/avatar.svg";
 import Tilt from "react-parallax-tilt";
 import {
   AiFillGithub,
-  AiOutlineTwitter,
   AiFillInstagram,
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
+import { SiX } from "react-icons/si";
 
 function Home2() {
   return (
@@ -63,16 +63,17 @@ function Home2() {
                 </a>
               </li>
               {/* Optional: Add your Twitter if needed */}
-              {/* <li className="social-icons">
+              <li className="social-icons">
                 <a
-                  href="https://twitter.com/yourTwitterHandle"
+                  href="https://x.com/VedantGaidhane?t=1pTPD2TV7g7Dsjb5xJq_rg&s=09"
                   target="_blank"
                   rel="noreferrer"
-                  className="icon-colour  home-social-icons"
+                  className="icon-colour home-social-icons"
+                  title="X (formerly Twitter)"
                 >
-                  <AiOutlineTwitter />
+                  <SiX />
                 </a>
-              </li> */}
+              </li>
               <li className="social-icons">
                 <a
                   href="https://www.linkedin.com/in/er-vedant-gaidhane-4a4051208?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
@@ -84,16 +85,16 @@ function Home2() {
                 </a>
               </li>
               {/* Optional: Add Instagram or remove if not needed */}
-              {/* <li className="social-icons">
+              <li className="social-icons">
                 <a
-                  href="https://www.instagram.com/yourInstagramHandle"
+                  href="https://www.instagram.com/vedant_gaidhane?igsh=MXI5cWwxcW9qenlsMg=="
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour home-social-icons"
                 >
                   <AiFillInstagram />
                 </a>
-              </li> */}
+              </li>
             </ul>
           </Col>
         </Row>

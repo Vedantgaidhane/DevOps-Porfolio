@@ -11,56 +11,130 @@ function About() {
     {
       title: "Cloud Cost Optimization",
       desc: [
-        "Cut AWS bills by 35%+ through automation, audits, and proactive resource management.",
+        "Reduced AWS bills through strategic automation, audits, and proactive resource management.",
         "Implemented right-sizing, reserved instances, and automated scheduling to minimize unnecessary spend.",
-        "Regularly review and optimize cloud usage for maximum efficiency.",
-        "Delivered cost transparency and reporting for stakeholders.",
+        "Delivered cost transparency and usage reporting for stakeholders.",
       ],
     },
     {
       title: "CI/CD Excellence",
       desc: [
-        "Designed Jenkins pipelines reducing deployment times by 80%.",
-        "Automated build, test, and deployment processes for faster, more reliable releases.",
-        "Integrated code quality checks and notifications for seamless developer experience.",
-        "Enabled rapid rollback and blue-green deployments.",
+        "Designed and maintained Jenkins pipelines reducing deployment times by 80%.",
+        "Automated build, test, and deployment processes for multiple applications.",
+        "Integrated SonarQube for automated code quality checks.",
+        "Enabled blue-green and rolling deployments for zero downtime.",
       ],
     },
     {
       title: "Infrastructure as Code",
       desc: [
-        "Provisioned reusable, secure AWS setups with Terraform.",
-        "Standardized infrastructure deployments for consistency and scalability.",
-        "Enabled rapid environment provisioning and disaster recovery.",
-        "Maintained version-controlled infrastructure for auditability.",
+        "Provisioned reusable AWS infrastructure with Terraform.",
+        "Version-controlled infrastructure for auditability and rollback.",
+        "Enabled rapid environment provisioning for dev, staging, and prod.",
+        "Implemented parameterized modules for reusable deployments.",
       ],
     },
     {
-      title: "Containerization",
+      title: "Containerized Deployments",
       desc: [
-        "Migrated and modernized applications with Docker & Kubernetes.",
-        "Improved scalability, portability, and deployment speed.",
-        "Automated container orchestration and monitoring for robust production systems.",
-        "Implemented secure image management and CI/CD integration.",
+        "Deployed multiple applications on the same server using Docker to ensure isolation and resource efficiency.",
+        "Automated image builds and pushed to private registries.",
+        "Implemented Kubernetes for orchestration in staging environments.",
+        "Secured container images with vulnerability scanning (Trivy).",
       ],
     },
     {
       title: "Application Security with AWS WAF + ALB",
       desc: [
-        "Secured EC2-hosted applications by configuring AWS WAF with tailored rules.",
+        "Configured AWS WAF with tailored rules to protect EC2-hosted applications.",
         "Integrated WAF with Application Load Balancer for advanced traffic filtering.",
         "Managed EC2 security groups, DNS, and networking for maximum protection.",
+        "Hardened workloads with GuardDuty and SIEM-based threat monitoring.",
       ],
     },
     {
       title: "Serverless Website Hosting",
       desc: [
-        "Delivered cost-efficient, scalable websites using S3, Lambda, and CloudFront.",
-        "Enabled secure, globally distributed, and virtually free hosting.",
-        "Automated deployments and optimized performance for static and dynamic content.",
+        "Hosted static websites using AWS S3 with CloudFront CDN for global reach.",
+        "Integrated Lambda@Edge for serverless processing and caching.",
+        "Optimized cost to achieve near-zero hosting expenses.",
+      ],
+    },
+    {
+      title: "Web Server Management",
+      desc: [
+        "Configured and optimized Nginx, Apache HTTPD, and Tomcat for production workloads.",
+        "Set up reverse proxies, SSL/TLS certificates, and caching.",
+        "Performed load testing and tuning for high performance.",
+      ],
+    },
+    {
+      title: "Monitoring & Observability",
+      desc: [
+        "Set up Prometheus for metric collection and Grafana for real-time visualization.",
+        "Integrated CloudWatch for AWS service monitoring and alerting.",
+        "Configured proactive alerts for downtime, latency, and resource spikes.",
+      ],
+    },
+    {
+      title: "Security & Compliance",
+      desc: [
+        "Implemented IAM best practices with least privilege access control.",
+        "Configured GuardDuty for continuous threat detection.",
+        "Integrated AWS Config for compliance and auditing.",
+        "Performed periodic vulnerability scanning and patching.",
+      ],
+    },
+    {
+      title: "Backup & Disaster Recovery",
+      desc: [
+        "Implemented automated EBS snapshot policies for critical workloads.",
+        "Set up cross-region S3 replication for disaster recovery.",
+        "Tested recovery procedures to ensure RTO/RPO compliance.",
+      ],
+    },
+    {
+      title: "DNS & Networking",
+      desc: [
+        "Configured Route 53 for domain management and traffic routing.",
+        "Designed secure VPC architectures with public and private subnets.",
+        "Set up NAT Gateways, Internet Gateways, and proper routing tables.",
+      ],
+    },
+    {
+      title: "Logging & Audit Trails",
+      desc: [
+        "Centralized logs with CloudWatch Logs and S3 archival.",
+        "Enabled AWS CloudTrail for API activity tracking and security audits.",
+        "Integrated log analysis into SIEM tools for real-time insights.",
+      ],
+    },
+    {
+      title: "Automation & Scripting",
+      desc: [
+        "Developed Bash and Python scripts to automate routine operational tasks.",
+        "Automated AWS service provisioning and cleanup scripts.",
+        "Used cron jobs and Lambda functions for scheduled maintenance.",
+      ],
+    },
+    {
+      title: "Dev/Test Environment Management",
+      desc: [
+        "Automated creation of on-demand staging environments for developers.",
+        "Implemented data masking for non-production environments.",
+        "Used spot instances for temporary workloads to save costs.",
+      ],
+    },
+    {
+      title: "Performance Optimization",
+      desc: [
+        "Optimized database query performance for hosted applications.",
+        "Tuned EC2 instance types and storage for workload needs.",
+        "Implemented CDN caching rules for faster content delivery.",
       ],
     },
   ];
+
 
   const achievementsRef = useRef([]);
   useEffect(() => {
@@ -272,70 +346,124 @@ function About() {
         </Row>
         <Toolstack />
 
-        {/* Contact Call-to-Action */}
-        <Row
-          className="justify-content-center"
-          style={{ margin: "2.5rem 0", textAlign: "center" }}
-        >
-          <Col xs={12}>
-            <h3 style={{ color: "#6c63ff", fontWeight: 700 }}>Let’s Connect</h3>
-            <p style={{ color: "#444", fontSize: "1.08rem" }}>
-              I’m always eager to exchange ideas on DevOps strategies, cloud
-              efficiency, and automation workflows.
-            </p>
-            <div
-              style={{
-                margin: "1.5rem 0",
-                display: "flex",
-                gap: "1rem",
-                justifyContent: "center",
-                flexWrap: "wrap",
-              }}
-            >
-              <Button
-                as="a"
-                variant="primary"
-                href="mailto:er.vedantgaidhane@gmail.com"
-                style={{
-                  fontWeight: 600,
-                  borderRadius: "2rem",
-                  padding: "0.8rem 1.5rem",
-                  fontSize: "1rem",
-                  letterSpacing: "0.5px",
-                }}
-              >
-                📧 Email Me
-              </Button>
-              <Button
-                as="a"
-                variant="outline-primary"
-                href="tel:+917294926849"
-                style={{
-                  fontWeight: 600,
-                  borderRadius: "2rem",
-                  padding: "0.8rem 1.5rem",
-                  fontSize: "1rem",
-                  letterSpacing: "0.5px",
-                  borderWidth: 2,
-                }}
-              >
-                📞 Call Me
-              </Button>
-            </div>
-            <blockquote
-              style={{
-                fontStyle: "italic",
-                color: "#6c757d",
-                maxWidth: 500,
-                margin: "2rem auto 0 auto",
-                fontSize: "1.08rem",
-              }}
-            >
-              “Good automation doesn’t replace great engineers — it amplifies
-              them.”
-            </blockquote>
-          </Col>
-        </Row>
+{/* Contact Call-to-Action */}
+<Row
+  className="justify-content-center"
+  style={{ margin: "2.5rem 0", textAlign: "center" }}
+>
+  <Col xs={12}>
+    <h3 style={{ color: "#6c63ff", fontWeight: 700 }}>Let’s Connect</h3>
+    <p style={{ color: "#444", fontSize: "1.08rem", maxWidth: 700, margin: "0 auto" }}>
+      I’m always eager to exchange ideas on DevOps strategies, cloud
+      efficiency, and automation workflows.
+    </p>
+
+<div
+  style={{
+    margin: "2rem 0",
+    display: "flex",
+    gap: "2rem",
+    justifyContent: "center",
+    flexWrap: "wrap",
+  }}
+>
+  {/* Email */}
+  <a
+    href="mailto:er.vedantgaidhane@gmail.com"
+    style={{
+      backgroundColor: "#0d6efd",
+      color: "#fff",
+      padding: "1rem 2rem",
+      borderRadius: "12px",
+      textDecoration: "none",
+      fontSize: "1.1rem",
+      fontWeight: 600,
+      boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
+      transition: "all 0.2s ease",
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      justifyContent: "center",
+      textAlign: "center",
+      minWidth: "240px",
+    }}
+    onMouseOver={(e) => (e.currentTarget.style.backgroundColor = "#0b5ed7")}
+    onMouseOut={(e) => (e.currentTarget.style.backgroundColor = "#0d6efd")}
+  >
+    📧 Email Me
+    <span
+      style={{
+        fontSize: "0.9rem",
+        fontWeight: 400,
+        marginTop: "6px",
+        textAlign: "center",
+        wordBreak: "break-word",
+      }}
+    >
+      er.vedantgaidhane@gmail.com
+    </span>
+  </a>
+
+  {/* Call */}
+  <a
+    href="tel:+917294926849"
+    style={{
+      border: "2px solid #0d6efd",
+      color: "#0d6efd",
+      padding: "1rem 2rem",
+      borderRadius: "12px",
+      textDecoration: "none",
+      fontSize: "1.1rem",
+      fontWeight: 600,
+      boxShadow: "0 4px 12px rgba(0,0,0,0.05)",
+      transition: "all 0.2s ease",
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      justifyContent: "center",
+      textAlign: "center",
+      minWidth: "240px",
+    }}
+    onMouseOver={(e) => {
+      e.currentTarget.style.backgroundColor = "#0d6efd";
+      e.currentTarget.style.color = "#fff";
+    }}
+    onMouseOut={(e) => {
+      e.currentTarget.style.backgroundColor = "transparent";
+      e.currentTarget.style.color = "#0d6efd";
+    }}
+  >
+    📞 Call Me
+    <span
+      style={{
+        fontSize: "0.9rem",
+        fontWeight: 400,
+        marginTop: "6px",
+        textAlign: "center",
+      }}
+    >
+      +91 72949 26849
+    </span>
+  </a>
+</div>
+
+
+
+
+    <blockquote
+      style={{
+        fontStyle: "italic",
+        color: "#6c757d",
+        maxWidth: 500,
+        margin: "2rem auto 0 auto",
+        fontSize: "1.08rem",
+      }}
+    >
+      “Good automation doesn’t replace great engineers — it amplifies them.”
+    </blockquote>
+  </Col>
+</Row>
+
 
         <Github />
       </Container>
