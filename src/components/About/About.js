@@ -4,6 +4,7 @@ import Particle from "../Particle";
 import Github from "./Github";
 import Techstack from "./Techstack";
 import Toolstack from "./Toolstack";
+import { Helmet } from "react-helmet-async";
 
 function About() {
   // Data for "What I Do"
@@ -135,7 +136,6 @@ function About() {
     },
   ];
 
-
   const achievementsRef = useRef([]);
   useEffect(() => {
     const handleScroll = () => {
@@ -155,196 +155,201 @@ function About() {
   }, []);
 
   return (
-    <Container
-      fluid
-      className="about-section"
-      style={{
-        minHeight: "100vh",
-        background: "linear-gradient(120deg, #f6f7fb 0%, #ecebff 100%)",
-        padding: 0,
-      }}
-    >
-      <Particle />
-      <Container style={{ maxWidth: 1200, padding: "2.5rem 1rem" }}>
-        {/* Hero Section */}
-        <Row
-          className="justify-content-center align-items-center"
-          style={{
-            minHeight: "30vh",
-            textAlign: "center",
-            marginBottom: "2.5rem",
-          }}
-        >
-          <Col md={10}>
-            <h1
-              style={{
-                fontWeight: 800,
-                color: "#04ae86ff",
-                fontSize: "3.7rem",
-                letterSpacing: "1.2px",
-                marginBottom: "0.5rem",
-              }}
-            >
-              Vedant Gaidhane
-            </h1>
-            <br />
-            <br />
-            <h2
-              style={{
-                color: "#8f8d8dff",
-                fontSize: "1.6rem",
-                fontWeight: 600,
-                marginBottom: "1.2rem",
-              }}
-            >
-              DevOps Engineer
-            </h2>
-            <p
-              style={{
-                fontSize: "1.15rem",
-                color: "#bbb5b5ff",
-                maxWidth: 1000,
-                margin: "0 auto",
-                lineHeight: 1.7,
-              }}
-            >
-              Passionate about building automated, scalable, and cost-efficient cloud infrastructures that deliver results.
-              
+    <>
+      <Helmet>
+        <title>About | Vedant Gaidhane</title>
+        <meta name="description" content="Learn more about Vedant Gaidhane, AWS & DevOps Engineer, his skills, experience, and professional background." />
+      </Helmet>
+      <Container
+        fluid
+        className="about-section"
+        style={{
+          minHeight: "100vh",
+          background: "linear-gradient(120deg, #f6f7fb 0%, #ecebff 100%)",
+          padding: 0,
+        }}
+      >
+        <Particle />
+        <Container style={{ maxWidth: 1200, padding: "2.5rem 1rem" }}>
+          {/* Hero Section */}
+          <Row
+            className="justify-content-center align-items-center"
+            style={{
+              minHeight: "30vh",
+              textAlign: "center",
+              marginBottom: "2.5rem",
+            }}
+          >
+            <Col md={10}>
+              <h1
+                style={{
+                  fontWeight: 800,
+                  color: "#04ae86ff",
+                  fontSize: "3.7rem",
+                  letterSpacing: "1.2px",
+                  marginBottom: "0.5rem",
+                }}
+              >
+                Vedant Gaidhane
+              </h1>
               <br />
+              <br />
+              <h2
+                style={{
+                  color: "#8f8d8dff",
+                  fontSize: "1.6rem",
+                  fontWeight: 600,
+                  marginBottom: "1.2rem",
+                }}
+              >
+                DevOps Engineer
+              </h2>
+              <p
+                style={{
+                  fontSize: "1.15rem",
+                  color: "#bbb5b5ff",
+                  maxWidth: 1000,
+                  margin: "0 auto",
+                  lineHeight: 1.7,
+                }}
+              >
+                Passionate about building automated, scalable, and cost-efficient cloud infrastructures that deliver results.
+                
+                <br />
 
-              I thrive on transforming complex, resource-heavy environments into streamlined, high-performance systems.
-            </p>
-          </Col>
-        </Row>
+                I thrive on transforming complex, resource-heavy environments into streamlined, high-performance systems.
+              </p>
+            </Col>
+          </Row>
 
-        {/* What I Do Section - Clean Card Grid, Responsive Width */}
-        <Row className="justify-content-center" style={{ margin: "2.5rem 0" }}>
-          <Col xs={12}>
-            <h3
-              style={{
-                color: "#6c63ff",
-                textAlign: "center",
-                fontWeight: 700,
-                marginBottom: "2rem",
-                letterSpacing: "1px",
-              }}
-            >
-              What I Do
-            </h3>
-          </Col>
-          <Col xs={12}>
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-                gap: "2rem",
-                justifyItems: "center",
-              }}
-            >
-              {whatIDo.map((item, idx) => (
-                <div
-                  key={idx}
-                  style={{
-                    background: "#fff",
-                    borderRadius: "1.5rem",
-                    boxShadow: "0 6px 32px rgba(108,99,255,0.10)",
-                    padding: "2.2rem 1.5rem",
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "flex-start",
-                    minHeight: 220,
-                    maxWidth: 420,
-                    width: "100%",
-                    border: "1.5px solid #ecebff",
-                    transition: "transform 0.2s, box-shadow 0.2s",
-                  }}
-                  onMouseOver={(e) => {
-                    e.currentTarget.style.transform = "translateY(-8px) scale(1.03)";
-                    e.currentTarget.style.boxShadow = "0 12px 36px rgba(108,99,255,0.16)";
-                  }}
-                  onMouseOut={(e) => {
-                    e.currentTarget.style.transform = "none";
-                    e.currentTarget.style.boxShadow = "0 6px 32px rgba(108,99,255,0.10)";
-                  }}
-                >
-                  <h5
+          {/* What I Do Section - Clean Card Grid, Responsive Width */}
+          <Row className="justify-content-center" style={{ margin: "2.5rem 0" }}>
+            <Col xs={12}>
+              <h3
+                style={{
+                  color: "#6c63ff",
+                  textAlign: "center",
+                  fontWeight: 700,
+                  marginBottom: "2rem",
+                  letterSpacing: "1px",
+                }}
+              >
+                What I Do
+              </h3>
+            </Col>
+            <Col xs={12}>
+              <div
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
+                  gap: "2rem",
+                  justifyItems: "center",
+                }}
+              >
+                {whatIDo.map((item, idx) => (
+                  <div
+                    key={idx}
                     style={{
-                      color: "#6c63ff",
-                      fontWeight: 700,
-                      marginBottom: 14,
-                      textAlign: "center",
+                      background: "#fff",
+                      borderRadius: "1.5rem",
+                      boxShadow: "0 6px 32px rgba(108,99,255,0.10)",
+                      padding: "2.2rem 1.5rem",
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "flex-start",
+                      minHeight: 220,
+                      maxWidth: 420,
                       width: "100%",
-                      fontSize: "1.15rem",
-                      letterSpacing: "0.5px",
+                      border: "1.5px solid #ecebff",
+                      transition: "transform 0.2s, box-shadow 0.2s",
+                    }}
+                    onMouseOver={(e) => {
+                      e.currentTarget.style.transform = "translateY(-8px) scale(1.03)";
+                      e.currentTarget.style.boxShadow = "0 12px 36px rgba(108,99,255,0.16)";
+                    }}
+                    onMouseOut={(e) => {
+                      e.currentTarget.style.transform = "none";
+                      e.currentTarget.style.boxShadow = "0 6px 32px rgba(108,99,255,0.10)";
                     }}
                   >
-                    {item.title}
-                  </h5>
-                  <ul
-                    style={{
-                      paddingLeft: 0,
-                      listStyle: "none",
-                      color: "#444",
-                      fontSize: "1rem",
-                      marginBottom: 0,
-                      width: "100%",
-                      lineHeight: 1.7,
-                      textAlign: "left",
-                    }}
-                  >
-                    {item.desc.map((line, i) => (
-                      <li
-                        key={i}
-                        style={{
-                          marginBottom: 8,
-                          paddingLeft: 0,
-                        }}
-                      >
-                        {line}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </Col>
-        </Row>
+                    <h5
+                      style={{
+                        color: "#6c63ff",
+                        fontWeight: 700,
+                        marginBottom: 14,
+                        textAlign: "center",
+                        width: "100%",
+                        fontSize: "1.15rem",
+                        letterSpacing: "0.5px",
+                      }}
+                    >
+                      {item.title}
+                    </h5>
+                    <ul
+                      style={{
+                        paddingLeft: 0,
+                        listStyle: "none",
+                        color: "#444",
+                        fontSize: "1rem",
+                        marginBottom: 0,
+                        width: "100%",
+                        lineHeight: 1.7,
+                        textAlign: "left",
+                      }}
+                    >
+                      {item.desc.map((line, i) => (
+                        <li
+                          key={i}
+                          style={{
+                            marginBottom: 8,
+                            paddingLeft: 0,
+                          }}
+                        >
+                          {line}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            </Col>
+          </Row>
 
-        {/* Tech Stack Section */}
-        <Row>
-          <Col xs={12}>
-            <h3
-              style={{
-                color: "#6c63ff",
-                textAlign: "center",
-                margin: "2rem 0 1rem 0",
-                fontWeight: 700,
-                letterSpacing: "1px",
-              }}
-            >
-              Tech Stack
-            </h3>
-          </Col>
-        </Row>
-        <Techstack />
+          {/* Tech Stack Section */}
+          <Row>
+            <Col xs={12}>
+              <h3
+                style={{
+                  color: "#6c63ff",
+                  textAlign: "center",
+                  margin: "2rem 0 1rem 0",
+                  fontWeight: 700,
+                  letterSpacing: "1px",
+                }}
+              >
+                Tech Stack
+              </h3>
+            </Col>
+          </Row>
+          <Techstack />
 
-        {/* Tool Stack Section */}
-        <Row>
-          <Col xs={12}>
-            <h3
-              style={{
-                color: "#6c63ff",
-                textAlign: "center",
-                margin: "2rem 0 1rem 0",
-                fontWeight: 700,
-                letterSpacing: "1px",
-              }}
-            >
-              Tools I Use
-            </h3>
-          </Col>
-        </Row>
-        <Toolstack />
+          {/* Tool Stack Section */}
+          <Row>
+            <Col xs={12}>
+              <h3
+                style={{
+                  color: "#6c63ff",
+                  textAlign: "center",
+                  margin: "2rem 0 1rem 0",
+                  fontWeight: 700,
+                  letterSpacing: "1px",
+                }}
+              >
+                Tools I Use
+              </h3>
+            </Col>
+          </Row>
+          <Toolstack />
 
 {/* Contact Call-to-Action */}
 <Row
@@ -465,9 +470,10 @@ function About() {
 </Row>
 
 
-        <Github />
+          <Github />
+        </Container>
       </Container>
-    </Container>
+    </>
   );
 }
 
