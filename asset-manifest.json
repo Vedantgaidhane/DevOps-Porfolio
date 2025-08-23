@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/DevOps-Porfolio/static/css/main.d0adacc3.css",
+    "main.js": "/DevOps-Porfolio/static/js/main.38bbb0a4.js",
+    "static/js/415.4d6acbeb.chunk.js": "/DevOps-Porfolio/static/js/415.4d6acbeb.chunk.js",
+    "static/js/787.1ed0c42c.chunk.js": "/DevOps-Porfolio/static/js/787.1ed0c42c.chunk.js",
+    "static/media/Landscape.jpg": "/DevOps-Porfolio/static/media/Landscape.8d47629e7ad9387b0aed.jpg",
+    "static/media/home-main.svg": "/DevOps-Porfolio/static/media/home-main.359935c39288e92d4dba5c9f2445b91d.svg",
+    "static/media/Vedant DevOps Engineer 1yr.pdf": "/DevOps-Porfolio/static/media/Vedant DevOps Engineer 1yr.c19ee8167c017233cc74.pdf",
+    "static/media/home-bg.jpg": "/DevOps-Porfolio/static/media/home-bg.dc52d5d40a40b13154b0.jpg",
+    "static/media/avatar.svg": "/DevOps-Porfolio/static/media/avatar.7f806e40d46fc76fbc3c4a3d71349951.svg",
+    "index.html": "/DevOps-Porfolio/index.html",
+    "static/media/pre.svg": "/DevOps-Porfolio/static/media/pre.4410c5baaa673cc131da.svg",
+    "main.d0adacc3.css.map": "/DevOps-Porfolio/static/css/main.d0adacc3.css.map",
+    "main.38bbb0a4.js.map": "/DevOps-Porfolio/static/js/main.38bbb0a4.js.map",
+    "415.4d6acbeb.chunk.js.map": "/DevOps-Porfolio/static/js/415.4d6acbeb.chunk.js.map",
+    "787.1ed0c42c.chunk.js.map": "/DevOps-Porfolio/static/js/787.1ed0c42c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d0adacc3.css",
+    "static/js/main.38bbb0a4.js"
+  ]
+}
